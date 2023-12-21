@@ -1,7 +1,5 @@
 export const requestACall = () => {
   const modal = document.querySelector(".header-modal");
-  const closeBtn = document.querySelector(".header-modal__close");
-  const callBtn = document.querySelector("div.col-sm-12>.button");
   const overlay = document.querySelector(".overlay");
 
   const showModal = () => {

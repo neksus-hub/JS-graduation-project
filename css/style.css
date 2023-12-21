@@ -125,7 +125,7 @@ input.error {
 .btn-warning {
   color: #fff;
   background-color: #ff8a17;
-  *background-color: #ff8a17;
+  background-color: #ff8a17;
   background-image: -moz-linear-gradient(top, #ffb336, #ff8a17);
   background-image: -webkit-gradient(
     linear,
@@ -149,12 +149,12 @@ input.error {
 .btn-warning[disabled] {
   color: #fff;
   background-color: #ff8a17;
-  *background-color: #003bb3;
+  background-color: #003bb3;
 }
 .btn-success {
   color: #ffffff;
   background-color: #009215;
-  *background-color: #009215;
+  background-color: #009215;
   background-image: -moz-linear-gradient(top, #00b51a, #009215);
   background-image: -webkit-gradient(
     linear,
@@ -178,7 +178,7 @@ input.error {
 .btn-success[disabled] {
   color: #ffffff;
   background-color: #009215;
-  *background-color: #003bb3;
+  background-color: #003bb3;
 }
 .btn-lg,
 .btn-group-lg > .btn {
