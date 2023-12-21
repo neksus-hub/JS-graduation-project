@@ -1,3 +1,3 @@
-import { calculator } from "./modules/calc";
+import { requestACall } from "./modules/requestACall";
 
-calculator();
+requestACall();

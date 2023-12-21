@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Кальк")})();
+(()=>{"use strict";(()=>{const e=document.querySelector(".header-modal"),t=(document.querySelector(".header-modal__close"),document.querySelector("div.col-sm-12>.button"),document.querySelector(".overlay"));document.addEventListener("click",(o=>{o.target.closest("div.col-sm-12>.button")?(e.style.display="block",t.style.display="block"):o.target.closest(".header-modal__close")&&(e.style.display="none",t.style.display="none")}))})()})();
