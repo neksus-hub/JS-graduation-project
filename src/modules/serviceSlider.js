@@ -1,25 +1,20 @@
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
-export const sliderCarousel = () => {
+export const serviceSlider = () => {
   const swiper = new Swiper(".swiper", {
     modules: [Navigation],
     loop: true,
     slidesPerView: 1,
 
     navigation: {
-      nextEl: ".benefits__arrow--right",
-      prevEl: ".benefits__arrow--left",
+      nextEl: ".services__arrow--right",
+      prevEl: ".services__arrow--left",
     },
 
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-
-      570: {
-        slidesPerView: 3,
+      576: {
+        slidesPerView: 2,
         spaceBetween: 15,
       },
     },
