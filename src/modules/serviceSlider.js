@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
 export const serviceSlider = () => {
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".service_swiper", {
     modules: [Navigation],
     loop: true,
     slidesPerView: 1,
