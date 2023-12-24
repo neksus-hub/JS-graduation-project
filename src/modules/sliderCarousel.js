@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
 export const sliderCarousel = () => {
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".swiper-carousel", {
     modules: [Navigation],
     loop: true,
     slidesPerView: 1,
