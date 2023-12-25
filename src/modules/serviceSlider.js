@@ -15,7 +15,6 @@ export const serviceSlider = () => {
     breakpoints: {
       576: {
         slidesPerView: 2,
-        spaceBetween: 15,
       },
     },
   });
