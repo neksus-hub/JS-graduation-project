@@ -6,6 +6,7 @@ import { callASpecialist } from "./modules/callASpecialist";
 import { timer } from "./modules/timer";
 import { validForm } from "./modules/validForm";
 import { validSecondForm } from "./modules/validSecondForm";
+import { callASpecialistValid } from "./modules/callASpecValid";
 
 requestACall();
 sliderCarousel();
@@ -15,3 +16,4 @@ callASpecialist();
 timer("31 december 2023");
 validForm();
 validSecondForm();
+callASpecialistValid();

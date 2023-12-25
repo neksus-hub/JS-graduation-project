@@ -73,9 +73,9 @@ export const validForm = () => {
     success.textContent = "Данные упешно отправлены";
     nameInput.insertAdjacentElement("beforebegin", success);
 
-    sendForm("https://jsonplaceholder.typicode.com/posts", user)
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
+    sendForm("https://jsonplaceholder.typicode.com/posts", user).catch(
+      (error) => console.log(error)
+    );
   };
 
   const clear = () => {

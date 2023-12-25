@@ -1,7 +1,7 @@
 import { sendForm } from "./sendForm";
 
-export const validSecondForm = () => {
-  const form = document.getElementById("second-form");
+export const callASpecialistValid = () => {
+  const form = document.getElementById("call-a-spec-form");
   const nameInput = form.querySelector(".form-control[name=fio]");
   const phoneInput = form.querySelector(".form-control[name=phone]");
 
@@ -70,7 +70,7 @@ export const validSecondForm = () => {
     nameInput.style.border = "1px solid green";
     phoneInput.style.border = "1px solid green";
     success.style.color = "green";
-    success.textContent = "Данные упешно отправлены";
+    success.textContent = "Заявка отправлена! Ожидайте специалиста!";
     nameInput.insertAdjacentElement("beforebegin", success);
 
     sendForm("https://jsonplaceholder.typicode.com/posts", user).catch(
