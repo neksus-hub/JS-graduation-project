@@ -22,6 +22,59 @@ export const timer = (deadline) => {
     };
   };
 
+  const renameTime = () => {
+    const pDays = document.querySelectorAll(".current-days");
+    const pHours = document.querySelectorAll(".current-hours");
+    const pMinutes = document.querySelectorAll(".current-minutes");
+    const pSeconds = document.querySelectorAll(".current-seconds");
+
+    const secondFormatter = new Intl.NumberFormat("ru", {
+      style: "unit",
+      unit: "second",
+      unitDisplay: "long",
+    });
+
+    const minutesFormatter = new Intl.NumberFormat("ru", {
+      style: "unit",
+      unit: "minute",
+      unitDisplay: "long",
+    });
+
+    const hoursFormatter = new Intl.NumberFormat("ru", {
+      style: "unit",
+      unit: "hour",
+      unitDisplay: "long",
+    });
+
+    const daysFormatter = new Intl.NumberFormat("ru", {
+      style: "unit",
+      unit: "day",
+      unitDisplay: "long",
+    });
+
+    let getTime = getTimeRemaining();
+
+    pSeconds.forEach((item) => {
+      item.textContent =
+        `${secondFormatter.format(getTime.seconds)}`.replace(/\d+/, "") + `:`;
+    });
+
+    pMinutes.forEach((item) => {
+      item.textContent =
+        `${minutesFormatter.format(getTime.minutes)}`.replace(/\d+/, "") + `:`;
+    });
+
+    pHours.forEach((item) => {
+      item.textContent =
+        `${hoursFormatter.format(getTime.hours)}`.replace(/\d+/, "") + `:`;
+    });
+
+    pDays.forEach((item) => {
+      item.textContent =
+        `${daysFormatter.format(getTime.days)}`.replace(/\d+/, "") + `:`;
+    });
+  };
+
   const updateClock = () => {
     let getTime = getTimeRemaining();
 
@@ -51,6 +104,7 @@ export const timer = (deadline) => {
 
     if (getTime.timeRemaining > 0) {
       setTimeout(updateClock, 1000);
+      setTimeout(renameTime, 1000);
     }
   };
 
