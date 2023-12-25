@@ -1,9 +1,9 @@
 import { sendForm } from "./sendForm";
 
-export const validForm = () => {
-  const nameInput = document.querySelector(".form-control[name=fio]");
-  const phoneInput = document.querySelector(".form-control[name=phone]");
-  const form = document.querySelector(".form-horizontal");
+export const validSecondForm = () => {
+  const form = document.getElementById("second-form");
+  const nameInput = form.querySelector(".form-control[name=fio]");
+  const phoneInput = form.querySelector(".form-control[name=phone]");
 
   let isError = true;
 
