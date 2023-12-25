@@ -351,14 +351,13 @@
               <div class="order-form rf">
                 <h3 class="order-form-heading">Оставить заявку</h3>
                 <div class="order-form-subheading">на получение скидки 20%</div>
-                <form name="action-form" class="form-horizontal">
+                <form name="action-form" class="form-horizontal" id="form-sale">
                   <div class="form-group">
                     <div class="col-sm-12">
                       <input
                         type="text"
                         name="fio"
                         class="form-control required"
-                        required
                         placeholder="ваше имя"
                       />
                     </div>
@@ -369,7 +368,6 @@
                         type="text"
                         name="phone"
                         class="form-control required"
-                        required
                         placeholder="ваш телефон"
                         data-mask="+7 (999) 999-99-99"
                       />
@@ -386,6 +384,7 @@
                         <button
                           type="submit"
                           class="btn btn-warning btn-block feedback"
+                          form="form-sale"
                         >
                           Получить скидку!
                         </button>
