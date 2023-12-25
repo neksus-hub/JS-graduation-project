@@ -1,8 +1,8 @@
 export const timer = (deadline) => {
-  const countDays = document.querySelector(".count_1>span");
-  const countHours = document.querySelector(".count_2>span");
-  const countMinutes = document.querySelector(".count_3>span");
-  const countSeconds = document.querySelector(".count_4>span");
+  const countDays = document.querySelectorAll(".count_1>span");
+  const countHours = document.querySelectorAll(".count_2>span");
+  const countMinutes = document.querySelectorAll(".count_3>span");
+  const countSeconds = document.querySelectorAll(".count_4>span");
 
   const getTimeRemaining = () => {
     let dateStop = new Date(deadline).getTime();
@@ -25,21 +25,29 @@ export const timer = (deadline) => {
   const updateClock = () => {
     let getTime = getTimeRemaining();
 
-    getTime.days < 10
-      ? (countDays.textContent = `0` + getTime.days)
-      : (countDays.textContent = getTime.days);
+    countDays.forEach((item) => {
+      getTime.days < 10
+        ? (item.textContent = `0` + getTime.days)
+        : (item.textContent = getTime.days);
+    });
 
-    getTime.hours < 10
-      ? (countHours.textContent = `0` + getTime.hours)
-      : (countHours.textContent = getTime.hours);
+    countHours.forEach((item) => {
+      getTime.hours < 10
+        ? (item.textContent = `0` + getTime.hours)
+        : (item.textContent = getTime.hours);
+    });
 
-    getTime.minutes < 10
-      ? (countMinutes.textContent = `0` + getTime.minutes)
-      : (countMinutes.textContent = getTime.minutes);
+    countMinutes.forEach((item) => {
+      getTime.minutes < 10
+        ? (item.textContent = `0` + getTime.minutes)
+        : (item.textContent = getTime.minutes);
+    });
 
-    getTime.seconds < 10
-      ? (countSeconds.textContent = `0` + getTime.seconds)
-      : (countSeconds.textContent = getTime.seconds);
+    countSeconds.forEach((item) => {
+      getTime.seconds < 10
+        ? (item.textContent = `0` + getTime.seconds)
+        : (item.textContent = getTime.seconds);
+    });
 
     if (getTime.timeRemaining > 0) {
       setTimeout(updateClock, 1000);

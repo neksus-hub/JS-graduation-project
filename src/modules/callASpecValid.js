@@ -70,7 +70,7 @@ export const callASpecialistValid = () => {
     nameInput.style.border = "1px solid green";
     phoneInput.style.border = "1px solid green";
     success.style.color = "green";
-    success.textContent = "Заявка отправлена! Ожидайте специалиста!";
+    success.textContent = "Успешно! Ожидайте специалиста!";
     nameInput.insertAdjacentElement("beforebegin", success);
 
     sendForm("https://jsonplaceholder.typicode.com/posts", user).catch(
