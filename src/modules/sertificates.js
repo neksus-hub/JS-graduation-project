@@ -8,7 +8,7 @@ export const sertificates = () => {
     item.style.cursor = "pointer";
 
     item.addEventListener("click", () => {
-      modal.style.backgroundImage = `url(${item.src})`;
+      modal.style.backgroundImage = `url(../images/documents/original/document4.jpg)`;
       modal.style.backgroundRepeat = `no-repeat`;
       modal.style.backgroundPosition = `center`;
       modal.style.backgroundSize = `370px 500px`;

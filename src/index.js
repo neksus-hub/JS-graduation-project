@@ -8,6 +8,7 @@ import { validForm } from "./modules/validForm";
 import { validSecondForm } from "./modules/validSecondForm";
 import { callASpecialistValid } from "./modules/callASpecValid";
 import { sertificates } from "./modules/sertificates";
+import { calc } from "./modules/calc";
 
 requestACall();
 sliderCarousel();
@@ -19,3 +20,4 @@ validForm();
 validSecondForm();
 callASpecialistValid();
 sertificates();
+calc(100);
