@@ -1,14 +1,20 @@
 export const sertificates = () => {
   const documents = document.querySelectorAll(".sertificate-document");
+  const imgBlocks = document.querySelectorAll(".img-block");
   const overlay = document.querySelector(".overlay");
   const closeBtn = document.querySelector(".img-modal__close");
   let modal = document.querySelector(".img-modal");
 
-  documents.forEach((item) => {
+  imgBlocks.forEach((item) => {
+    const link = item.querySelector(".img-original-link");
+
+    console.log(link);
+
     item.style.cursor = "pointer";
 
-    item.addEventListener("click", () => {
-      modal.style.backgroundImage = `url(../images/documents/original/document4.jpg)`;
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.backgroundImage = `url(${link.href})`;
       modal.style.backgroundRepeat = `no-repeat`;
       modal.style.backgroundPosition = `center`;
       modal.style.backgroundSize = `370px 500px`;
@@ -23,3 +29,5 @@ export const sertificates = () => {
     overlay.style.display = "none";
   });
 };
+
+//../images/documents/original/document4.jpg)

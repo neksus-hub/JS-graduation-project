@@ -5,5 +5,9 @@ export const calc = (price = 100) => {
   const squareInput = document.getElementById("calc-input");
   const calcTotal = document.getElementById("calc-total");
 
-  console.log(calcTotal);
+  const countCalc = () => {};
+
+  calculator.addEventListener("input", (e) => {
+    countCalc();
+  });
 };
