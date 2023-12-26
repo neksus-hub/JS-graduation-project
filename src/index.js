@@ -10,12 +10,14 @@ import { callASpecialistValid } from "./modules/callASpecValid";
 import { sertificates } from "./modules/sertificates";
 //import { calc } from "./modules/calc";
 import { maskTel } from "./modules/maskTel";
+import { requestACallValid } from "./modules/requestACallValid";
 
 requestACall();
 sliderCarousel();
 smoothScroll();
 serviceSlider();
 callASpecialist();
+requestACallValid();
 timer("31 december 2023");
 validForm();
 validSecondForm();

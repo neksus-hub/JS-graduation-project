@@ -1,9 +1,13 @@
 import { sendForm } from "./sendForm";
 
-export const callASpecialistValid = () => {
-  const form = document.getElementById("call-a-spec-form");
+export const requestACallValid = () => {
+  const form = document.getElementById("request-a-call");
   const nameInput = form.querySelector(".form-control[name=fio]");
   const phoneInput = form.querySelector(".form-control[name=phone]");
+
+  console.log(form);
+  console.log(nameInput);
+  console.log(phoneInput);
 
   let isError = true;
 

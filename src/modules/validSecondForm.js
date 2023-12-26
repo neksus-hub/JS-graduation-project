@@ -22,20 +22,10 @@ export const validSecondForm = () => {
       onError(phoneInput, "Полe должно быть заполнено!");
     }
 
-    if (phoneInput.value.length > 16) {
-      onError(phoneInput, "Максимум 16 символов");
-    }
-
     if (!/[^а-яa-zA-ZА-Я]/g.test(nameInput.value)) {
       nameInput.style.border = "1px solid #dfdfdf";
     } else {
       onError(nameInput, "Только буквы");
-    }
-
-    if (!/[^\d+]/g.test(phoneInput.value)) {
-      phoneInput.style.border = "1px solid #dfdfdf";
-    } else {
-      onError(phoneInput, `Только цифры и "+"!`);
     }
 
     if (isError === true) {
@@ -54,6 +44,8 @@ export const validSecondForm = () => {
     error.style.color = "red";
     error.textContent = errorText;
     input.insertAdjacentElement("beforebegin", error);
+
+    setTimeout(clear, 3000);
   };
 
   const onSuccess = () => {
@@ -76,6 +68,8 @@ export const validSecondForm = () => {
     sendForm("https://jsonplaceholder.typicode.com/posts", user).catch(
       (error) => console.log(error)
     );
+
+    setTimeout(clear, 3000);
   };
 
   const clear = () => {
