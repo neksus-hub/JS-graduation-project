@@ -8,8 +8,6 @@ export const sertificates = () => {
   imgBlocks.forEach((item) => {
     const link = item.querySelector(".img-original-link");
 
-    console.log(link);
-
     item.style.cursor = "pointer";
 
     item.addEventListener("click", (e) => {
