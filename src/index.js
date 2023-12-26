@@ -7,6 +7,7 @@ import { timer } from "./modules/timer";
 import { validForm } from "./modules/validForm";
 import { validSecondForm } from "./modules/validSecondForm";
 import { callASpecialistValid } from "./modules/callASpecValid";
+import { sertificates } from "./modules/sertificates";
 
 requestACall();
 sliderCarousel();
@@ -17,3 +18,4 @@ timer("31 december 2023");
 validForm();
 validSecondForm();
 callASpecialistValid();
+sertificates();

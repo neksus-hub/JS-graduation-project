@@ -1562,7 +1562,19 @@ input.error {
   display: none;
 }
 
+.img-modal {
+  display: none;
+}
+
 .services-modal--opened {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.img-modal--opened {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1576,6 +1588,7 @@ input.error {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
+  background-color: grey;
 }
 
 .header-modal__close {
@@ -1598,7 +1611,19 @@ input.error {
   cursor: pointer;
 }
 
+.img-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
 .services-modal__close:hover {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.img-modal__close:hover {
   color: rgba(0, 0, 0, 0.35);
 }
 
