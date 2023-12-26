@@ -51,8 +51,6 @@ export const requestACallValid = () => {
   const onSuccess = () => {
     const calcTotal = document.getElementById("calc-total");
 
-    console.log(calcTotal);
-
     let success = document.createElement("p");
 
     let user = {

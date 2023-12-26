@@ -43,12 +43,22 @@ export const validForm = () => {
   };
 
   const onSuccess = () => {
+    const calcTotal = document.getElementById("calc-total");
+
     let success = document.createElement("p");
 
     let user = {
       name: nameInput.value,
       phone: phoneInput.value,
     };
+
+    if (calcTotal) {
+      user = {
+        name: nameInput.value,
+        phone: phoneInput.value,
+        total: calcTotal.value,
+      };
+    }
 
     nameInput.value = "";
     phoneInput.value = "";
