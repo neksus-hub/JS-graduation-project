@@ -10,6 +10,11 @@ body {
   font-weight: 300;
   color: #4f686e;
 }
+
+body.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 h2 span {
   font-family: "NeoSansCyr-Medium", sans-serif;
 }
