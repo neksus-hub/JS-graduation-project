@@ -8,7 +8,7 @@ import { validForm } from "./modules/validForm";
 import { validSecondForm } from "./modules/validSecondForm";
 import { callASpecialistValid } from "./modules/callASpecValid";
 import { sertificates } from "./modules/sertificates";
-//import { calc } from "./modules/calc";
+import { calc } from "./modules/calc";
 import { maskTel } from "./modules/maskTel";
 import { requestACallValid } from "./modules/requestACallValid";
 
@@ -23,5 +23,5 @@ validForm();
 validSecondForm();
 callASpecialistValid();
 sertificates();
-//calc(100);
+calc(100);
 maskTel();

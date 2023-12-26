@@ -5,10 +5,6 @@ export const requestACallValid = () => {
   const nameInput = form.querySelector(".form-control[name=fio]");
   const phoneInput = form.querySelector(".form-control[name=phone]");
 
-  console.log(form);
-  console.log(nameInput);
-  console.log(phoneInput);
-
   let isError = true;
 
   form.addEventListener("submit", (e) => {
@@ -53,12 +49,24 @@ export const requestACallValid = () => {
   };
 
   const onSuccess = () => {
+    const calcTotal = document.getElementById("calc-total");
+
+    console.log(calcTotal);
+
     let success = document.createElement("p");
 
     let user = {
       name: nameInput.value,
       phone: phoneInput.value,
     };
+
+    if (calcTotal) {
+      user = {
+        name: nameInput.value,
+        phone: phoneInput.value,
+        total: calcTotal.value,
+      };
+    }
 
     nameInput.value = "";
     phoneInput.value = "";
