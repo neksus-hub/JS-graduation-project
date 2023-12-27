@@ -58,7 +58,7 @@ export const callASpecialistValid = () => {
       phone: phoneInput.value,
     };
 
-    if (calcTotal) {
+    if (calcTotal && calcTotal.value !== "") {
       user = {
         name: nameInput.value,
         phone: phoneInput.value,
